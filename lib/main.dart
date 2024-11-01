@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const myApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class myApp extends StatefulWidget {
+  const myApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  State<myApp> createState() => _myAppState();
+}
+
+class _myAppState extends State<myApp> {
+  @override
+  Widget build(BuildContext context) => MaterialApp(
+        home: Image.asset("assets/img/logo2.jpg"),
+      );
 }
